@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".New_Shift_Activity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="17dp" />
+
+        <EditText
+            android:id="@+id/editTextdesc1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:gravity="center"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:inputType="textPersonName"
+            android:hint="Description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewStart"
+                android:layout_width="97dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:text="@string/starttime" />
+
+            <EditText
+                android:id="@+id/editTextSD"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:hint="Date(DD/MM/YYYY)"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/editTextST"
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:hint="Time(hh:mm)"
+                android:inputType="time" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewEnd"
+                android:layout_width="86dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+
+                android:text="@string/endshift" />
+
+            <EditText
+                android:id="@+id/editTextED"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:hint="Date(DD/MM/YYYY)"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/editTextET"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:ems="10"
+                android:hint="Time(hh:mm)"
+                android:inputType="time" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextbreak1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:hint="Break(1break = 30min)"
+            android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/editTextRate"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:hint="Rate per hour"
+            android:inputType="numberDecimal" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/mo" />
+
+            <TextView
+                android:id="@+id/TextViewTotalPay"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="Total Pay"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/btnadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:layout_gravity="center"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/btncalc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:text="@string/calculate" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/Bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_nav"
+        android:background="#00BCD4"
+        app:itemTextColor="#FFFFFF"
+        app:itemIconTint="@android:color/white"
+        />
+
+
+</android.support.design.widget.CoordinatorLayout>

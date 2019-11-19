@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_Start_new"
+        android:enabled="true"
+        android:title="New Shift"
+        android:icon="@drawable/ic_alarm"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_view"
+        android:enabled="true"
+        android:title="View Shift"
+        android:icon="@drawable/ic_eye"
+        app:showAsAction="ifRoom" />
+</menu>
